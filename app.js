@@ -15,8 +15,8 @@ const checkFilesize = require('./check-filesize-process');
 
 const levels = {
     SEVERE: 0,
-    IMPORTANT: 3,
-    INFORMATION: 5
+    IMPORTANT: 1,
+    INFORMATION: 2
 }
 
 const myFormat = winston.format.printf((log) => {
