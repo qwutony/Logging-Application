@@ -16,7 +16,7 @@ const checkFilesize = require('./check-filesize-process');
 const levels = {
     SEVERE: 0,
     IMPORTANT: 1,
-    INFORMATION: 2
+    INFORMATION: 2,
 }
 
 const myFormat = winston.format.printf((log) => {
@@ -107,7 +107,7 @@ const logCache = new Queue();
 function queueLog(log) {
 
     logCache.add(log);
-    while (logCache.length() > 1000) {
+    while (logCache.length() > 50) {
         const oldestLog = logCache.remove();
         logger.log(oldestLog.severity, oldestLog);
     }
