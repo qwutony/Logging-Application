@@ -16,7 +16,7 @@ const checkFilesize = require('./check-filesize-process');
 const levels = {
     SEVERE: 0,
     IMPORTANT: 1,
-    INFORMATION: 2,
+    UNKNOWN: 2,
 }
 
 const myFormat = winston.format.printf((log) => {
@@ -24,7 +24,7 @@ const myFormat = winston.format.printf((log) => {
 });
 
 const logger = winston.createLogger({
-    level: 'INFORMATION',
+    level: 'UNKNOWN',
     levels: levels,
     format: winston.format.json(),
     defaultMeta: { service: 'user-service' },
@@ -81,7 +81,7 @@ function createLog(report) {
 
     //id, date, severity
 
-    let severity = 'INFORMATION';
+    let severity = 'UNKNOWN';
     if (violatedDirective == 'style-src') {
         severity = "IMPORTANT";
     } else if (violatedDirective == 'script-src') {
