@@ -79,8 +79,8 @@ function refilter() {
         // return a number < 0 if itemA < itemB (comes before)
         // return a number > 0 if itemA > itemB (comes after)
         // return 0 if don't care
-        const severityA = ['UNKNOWN', 'MEDIUM', 'HIGH'].indexOf(itemA.severity);
-        const severityB = ['UNKNOWN', 'MEDIUM', 'HIGH'].indexOf(itemB.severity);
+        const severityA = ['UNKNOWN', 'IMPORTANT', 'SEVERE'].indexOf(itemA.severity);
+        const severityB = ['UNKNOWN', 'IMPORTANT', 'SEVERE'].indexOf(itemB.severity);
 
         if (severityA > severityB) {
             return -1;
