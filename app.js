@@ -35,7 +35,7 @@ const logger = winston.createLogger({
       //
       new winston.transports.File({
                   filename: 'reports.log',
-                  maxsize: 10000,
+                  maxsize: 10000000,
                   format: myFormat,
               }),
       new winston.transports.Console({
@@ -107,7 +107,7 @@ const logCache = new Queue();
 function queueLog(log) {
 
     logCache.add(log);
-    while (logCache.length() > 50) {
+    while (logCache.length() > 1000) {
         const oldestLog = logCache.remove();
         logger.log(oldestLog.severity, oldestLog);
     }
