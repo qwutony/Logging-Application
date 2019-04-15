@@ -1,12 +1,12 @@
 # Logging-Application
 
-This is a logging application for violation of content security policies.
+This is a logging application for the violation of content security policies.
 
 This application requires another web application to send security reports to the logging application, which will then allow it to parse and transform the reports into a simple and easily-readable format.
 
 Currently, the application can detect style-src and script-src, but is capable of adding more policies to tailor to your own needs.
 
-This is a work in progress, and it is currently have minimal features.
+This is a work in progress, and it is currently has minimal features.
 
 **Installation Instructions**
 
@@ -16,7 +16,8 @@ To make a copy of the application on *nix, use:
 git clone https://github.com/qwutony/Logging-Application.git
 ```
 
-Afterwards, enter the folder and depending on whether you wish to use the application in development or production mode, do:
+
+Afterwards, depending on whether you wish to use the application in development or production mode, do:
 
 ```shell
 npm install --production # for production
@@ -26,11 +27,13 @@ npm install --production # for production
 npm install --save-dev # for development
 ```
 
+
 For developers: to run a series of tests to ensure that the application is working as intended, after installing all the dependencies, do:
 
 ```shell
 npm test
 ```
+
 
 You can start the application by using:
 
@@ -39,6 +42,7 @@ node app.js
 ```
 
 and navigating to localhost:3000.
+
 
 **Third-party dependencies**
 
