@@ -97,3 +97,18 @@ describe("range queries with no results", () => {
 });
 ```
 
+**Types and structure of input data for testing**
+
+The type of input data required is to simply import the entire file, and retrieve the class variable definition to be used for testing. An example will be:
+
+```javascript
+const BST = require('./bst');
+```
+
+This will require the bst file, and inside will contain the class that is ready to be tested. A variable should be created to represent an instance of the class.
+
+**Steps to conduct each test**
+
+The methodology of testing is based off test-driven development. Each test is created before the actual program is written, and since we are focused on unit testing, the result will usually expect a single correct output. A script is then used to save the results of the output into a file containing the results and logs of the test.
+
+For each given test case in bst.test.js and queue.test.js, a single answer should be expected, and it can be from an empty array to a single value to null, depending on what is being tested. Since there is no range in testing, the benchmark is for all unit tests to pass by having the exact value as expected.
