@@ -1,4 +1,4 @@
-const BST = require('./bst');
+const BST = require('.././bst');
 
 
 describe("test the lookup method in trivial trees", () => {

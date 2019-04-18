@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "jest 2>output.txt"
+    "test": "jest --no-color 2>tests/output.txt"
   },
   "author": "",
   "license": "ISC",
